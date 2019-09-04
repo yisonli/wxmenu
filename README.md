@@ -43,4 +43,11 @@ $form->wxmenu('content');
 
 ## License
 
-Licensed under [The MIT License (MIT)] (LICENSE).
+Licensed under [The MIT License](LICENSE).
+
+## About Me
+name: yison.li  
+blog: [http://yyeer.com](http://yyeer.com)  
+github: [https://github.com/yisonli](https://github.com/yisonli)
+
+![](http://yyeer.com/assets/img/YisonWechat.png)
