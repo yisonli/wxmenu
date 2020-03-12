@@ -16,6 +16,7 @@ composer require yisonli/wxmenu
 ```
 
 Then, publish the resource directory:
+
 ```bash
 php artisan vendor:publish --tag=wxmenu --force
 ```
@@ -37,8 +38,12 @@ In the `extensions` section of the `config/admin.php` file, add some configurati
 ## Usage
 
 Use it in the form form:
+
 ```php
 $form->wxmenu('content');
+
+// Also you can set default value like this
+$form->wxmenu('content')->default($default_value);
 ```
 
 ## License

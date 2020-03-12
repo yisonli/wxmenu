@@ -19,12 +19,14 @@ class WXMenuFormField extends Field
     public function render()
     {
         if(empty($this->value)) {
-            $this->value = [
+            $this->value = !empty($this->default) ? $this->default : [
                 "button" => [],
             ];
         }
-        if (is_array($this->value)) {
-            $this->value = json_encode($this->value, JSON_UNESCAPED_UNICODE);
+        if (!is_string($this->value)) {
+            $this->value = json_encode($this->value);
+        }else {
+            $this->value = json_encode(json_decode($this->value));   //兼容json里有类似</p>格式，首次初始化显示会丢失的问题
         }
 
         return parent::render();
